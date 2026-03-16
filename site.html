@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Site Completo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            background-color: #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #333;
+            border-radius: 8px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 60%;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+        img {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body style="background-color: lightblue;">
+
+    <marquee>Bem-vindo ao meu site em uma página!</marquee>
+
+    <!-- Menu de navegação -->
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#lista">Lista</a>
+        <a href="#contato">Contato</a>
+        <a href="#tabela">Tabela</a>
+    </nav>
+
+    <!-- Seção Início -->
+    <section id="inicio" style="background-color: lightcyan;">
+        <h1>Página Inicial</h1>
+        <p>Este é o início do nosso site.</p>
+        <img src="foto1.jpg" alt="Imagem inicial" width="300">
+    </section>
+
+    <!-- Seção Lista -->
+    <section id="lista" style="background-color: lightgreen;">
+        <h1>Lista Ordenada</h1>
+        <ol>
+            <li>Primeiro item</li>
+            <li>Segundo item</li>
+            <li>Terceiro item</li>
+        </ol>
+        <img src="foto2.jpg" alt="Imagem da lista" width="300">
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" style="background-color: lightyellow;">
+        <h1>Formulário de Contato</h1>
+        <form action="#" method="post">
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome"><br><br>
+
+            <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="mensagem">Mensagem:</label><br>
+            <textarea id="mensagem" name="mensagem"></textarea><br><br>
+
+            <input type="submit" value="Enviar">
+        </form>
+        <img src="foto3.jpg" alt="Imagem de contato" width="300">
