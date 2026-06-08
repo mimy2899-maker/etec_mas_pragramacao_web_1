@@ -1,51 +1,43 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
-    <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bistrô & Restaurante - Menu Executivo</title>
     
-    <!-- CSS EMBUTIDO (Substitui a necessidade de um arquivo style.css separado para o Bloco de Notas) -->
+    
     <style>
-        /* ==========================================
-           1. FUNDO DA PÁGINA (CONFORME REQUISITOS)
-           ========================================== */
+     
         body {
-            /* Imagem de fundo real de um salão de restaurante aconchegante */
+
             background-image: url('https://unsplash.com'); 
             
-            /* Propriedades exigidas para controle do fundo */
+         
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
             
-            /* Configurações gerais */
+        
             font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
             padding: 40px 20px;
         }
 
-        /* ==========================================
-           2. AÇÃO: ESTILIZAÇÃO DO TÍTULO PRINCIPAL
-           ========================================== */
+      
         h1 {
             text-align: center;
-            text-transform: uppercase; /* Força todas as letras maiúsculas */
+            text-transform: uppercase; 
             color: #ffffff;
             font-size: 3.2em;
             letter-spacing: 3px;
             margin-bottom: 25px;
             font-weight: 800;
-            /* Sombra projetada para destacar o texto sobre a imagem de fundo */
             text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
         }
 
-        /* ==========================================
-           3. CONTEÚDO: DIV PRINCIPAL ("PLACA" DO MENU)
-           ========================================== */
+        
         .placa-menu {
-            /* Cor de fundo usando exatamente o valor RGBA solicitado na foto para legibilidade */
             background-color: rgba(255, 255, 255, 0.9); 
             max-width: 800px;
             margin: 0 auto;
@@ -54,11 +46,6 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
 
-        /* ==========================================
-           4. ELEMENTOS INTERNOS DO RESTAURANTE
-           ========================================== */
-        
-        /* Cabeçalho interno do menu */
         .placa-header {
             text-align: center;
             margin-bottom: 35px;
@@ -75,11 +62,10 @@
         .linha-decorativa {
             height: 3px;
             width: 70px;
-            background-color: #c0392b; /* Detalhe em vermelho gastronômico */
+            background-color: #c0392b; 
             margin: 0 auto;
         }
 
-        /* Títulos de seções */
         h2 {
             font-size: 1.7em;
             color: #2c3e50;
@@ -97,7 +83,6 @@
             margin-bottom: 15px;
         }
 
-        /* Estrutura dos Pratos do Cardápio */
         .cardapio-item {
             display: flex;
             justify-content: space-between;
@@ -127,11 +112,9 @@
         .item-preco {
             font-weight: 700;
             font-size: 1.15em;
-            color: #27ae60; /* Verde para destacar valores */
+            color: #27ae60;
             white-space: nowrap;
         }
-
-        /* Seção da Equipe estruturada em blocos lado a lado */
         .grid-equipe {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -168,7 +151,6 @@
             line-height: 1.4;
         }
 
-        /* Rodapé com Infos Úteis */
         .placa-footer {
             display: flex;
             justify-content: space-around;
@@ -195,10 +177,8 @@
 </head>
 <body>
 
-    <!-- Ação: Título em maiúsculas chamando a atenção fora da div principal -->
     <h1>Sabores do Campo Bistrô</h1>
 
-    <!-- Conteúdo: Div principal simulando a placa opaca -->
     <div class="placa-menu">
         
         <header class="placa-header">
@@ -206,7 +186,6 @@
             <div class="linha-decorativa"></div>
         </header>
 
-        <!-- SEÇÃO: CARDÁPIO -->
         <section>
             <h2>🍴 Cardápio do Dia</h2>
             
@@ -245,9 +224,8 @@
             </div>
         </section>
 
-        <!-- SEÇÃO: FUNCIONÁRIOS -->
         <section>
-            <h2>🧑‍🍳 Nossos Profissionais</h2>
+            <h2>Nossos Profissionais</h2>
             <div class="grid-equipe">
                 <div class="membro-card">
                     <span class="membro-cargo">Chef Executivo</span>
@@ -263,14 +241,13 @@
             </div>
         </section>
 
-        <!-- RODAPÉ DA PLACA -->
         <footer class="placa-footer">
             <div class="info-bloco">
-                <h4>⏰ Horários</h4>
+                <h4>Horários</h4>
                 <p>Terça a Domingo: 11h30 às 23h</p>
             </div>
             <div class="info-bloco">
-                <h4>📍 Localização</h4>
+                <h4>Localização</h4>
                 <p>Rua dos Sabores, 450 - Bairro Jardins</p>
             </div>
         </footer>
