@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forno Nobre | Pizzaria Artesanal</title>
+<meta name="description" content="Pizzas artesanais feitas com ingredientes selecionados. Peça sua pizza na Forno Nobre.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍕</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<!-- Biblioteca 1: Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Biblioteca 2: AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!-- Biblioteca 3: Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<style>
+:root{--red:#b92e24;--deep:#681b18;--cream:#fff8ed;--gold:#e6b866;--ink:#26221e;--muted:#746b63}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif}h1,h2,h3,.brand{font-family:'Playfair Display',serif}.navbar{background:rgba(255,248,237,.96);backdrop-filter:blur(12px);box-shadow:0 2px 18px #32160c0d}.brand{font-weight:800;font-size:1.5rem;color:var(--deep);letter-spacing:-.5px}.brand span{color:var(--red)}.nav-link{font-weight:600;color:#453c35!important}.nav-link:hover{color:var(--red)!important}.btn-pizza{background:var(--red);color:white;border:0;border-radius:999px;padding:13px 23px;font-weight:700;transition:.25s}.btn-pizza:hover{background:var(--deep);color:white;transform:translateY(-2px)}.btn-outline-pizza{border:1px solid var(--red);color:var(--red);border-radius:999px;padding:12px 22px;font-weight:700}.btn-outline-pizza:hover{background:var(--red);color:white}.hero{min-height:690px;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 78% 45%,#f3d9b4 0,#f7e8d2 23%,var(--cream) 55%)}.hero:before{content:"";position:absolute;width:500px;height:500px;border:1px solid #b92e2420;border-radius:50%;right:-120px;top:70px}.hero-kicker{color:var(--red);font-weight:800;letter-spacing:2.5px;text-transform:uppercase;font-size:.78rem}.hero h1{font-size:clamp(3rem,6vw,5.7rem);line-height:1.02;letter-spacing:-2px;max-width:650px}.hero h1 em{color:var(--red);font-style:normal}.hero p{font-size:1.1rem;color:var(--muted);max-width:480px;line-height:1.8}.hero-pizza{width:min(100%,550px);aspect-ratio:1;object-fit:cover;border-radius:50%;box-shadow:0 28px 70px #6a281b30;border:12px solid #fff8ed;position:relative;z-index:1}.hero-image-wrap{position:relative;text-align:center}.round-note{position:absolute;bottom:7%;left:0;background:white;border-radius:18px;padding:15px 20px;box-shadow:0 12px 35px #3b1d1517;z-index:2;font-weight:700}.round-note small{display:block;color:var(--muted);font-weight:500}.section-pad{padding:92px 0}.eyebrow{color:var(--red);font-size:.75rem;font-weight:800;letter-spacing:2px;text-transform:uppercase}.section-title{font-size:clamp(2.2rem,4vw,3.5rem);letter-spacing:-1px}.section-sub{color:var(--muted);max-width:600px;line-height:1.8}.menu-section{background:#fff}.filter-btn{border:1px solid #e7d8c7;background:transparent;border-radius:99px;padding:9px 18px;font-weight:700;color:#62554a}.filter-btn.active,.filter-btn:hover{background:var(--deep);border-color:var(--deep);color:white}.pizza-card{height:100%;border:1px solid #f0e5d8;border-radius:22px;overflow:hidden;background:#fff;transition:transform .25s,box-shadow .25s}.pizza-card:hover{transform:translateY(-7px);box-shadow:0 18px 40px #401c1114}.pizza-card img{width:100%;height:220px;object-fit:cover}.pizza-body{padding:22px}.pizza-body h3{font-size:1.4rem}.pizza-body p{font-size:.92rem;color:var(--muted);min-height:46px}.price{font-size:1.3rem;color:var(--red);font-weight:800}.tag{display:inline-block;font-size:.7rem;letter-spacing:.5px;text-transform:uppercase;background:#f9eee0;color:#8d4c20;border-radius:5px;padding:5px 8px;font-weight:800}.feature-band{background:var(--deep);color:white}.feature-band .section-sub{color:#ead7ce}.feature-icon{font-size:1.7rem;background:#ffffff14;width:58px;height:58px;display:grid;place-items:center;border-radius:16px;margin-bottom:18px}.feature-band h3{font-size:1.3rem}.feature-band p{color:#e5cfc7;font-size:.95rem;line-height:1.7}.story-img{width:100%;height:430px;object-fit:cover;border-radius:24px}.testimonial{background:#f4e6d4;border-radius:24px;padding:28px;height:100%}.stars{color:#b77c26;letter-spacing:3px}.testimonial p{line-height:1.8;color:#51463e}.cta{background:linear-gradient(120deg,#8f211b,var(--red));color:white;border-radius:28px;padding:54px;position:relative;overflow:hidden}.cta:after{content:"🍕";position:absolute;font-size:180px;right:2%;bottom:-42px;opacity:.12;transform:rotate(-20deg)}.cta h2{font-size:clamp(2rem,4vw,3.2rem)}.cta p{color:#f7d9d1;max-width:500px}.footer{background:#241b17;color:#f7eee5;padding:45px 0 25px}.footer p,.footer a{color:#c8b7ac}.footer a{text-decoration:none}.footer a:hover{color:white}.cart-pill{position:relative}.cart-count{font-size:.7rem;background:var(--gold);color:#351e13;border-radius:50%;min-width:19px;height:19px;display:inline-grid;place-items:center;margin-left:4px}.floating-order{position:fixed;bottom:20px;right:20px;z-index:10;box-shadow:0 8px 25px #4b150f30}.library-panel{background:#fff;border:1px solid #eadbca;border-radius:22px;padding:26px;height:100%}.library-panel code{color:var(--red);background:#fff1e7;padding:3px 6px;border-radius:5px}.library-panel p{color:var(--muted);line-height:1.75}.library-number{font-family:'Playfair Display',serif;font-size:2rem;color:#d8b27a}.library-section{background:#f7ecde}.form-control,.form-select{border-radius:12px;padding:12px;border-color:#e8d9c8}.modal-content{border:0;border-radius:22px}.modal-header{background:var(--cream);border-radius:22px 22px 0 0}
+@media(max-width:767px){.hero{padding:70px 0 55px;min-height:auto}.hero h1{letter-spacing:-1px}.hero-image-wrap{margin-top:35px}.hero-pizza{max-width:390px}.section-pad{padding:65px 0}.story-img{height:300px}.cta{padding:34px 25px}.round-note{left:3%}}
+
+section[id]{scroll-margin-top:76px}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.pizza-card img,.story-img,.hero-pizza{background:#f1e2cc}
+.cart-row{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:16px}
+.qty{display:flex;align-items:center;gap:10px;font-weight:700}
+.qty .btn-outline-pizza{padding:2px 13px;line-height:1.4}
+.floating-order{padding:12px 18px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg sticky-top py-3">
+ <div class="container">
+  <a class="navbar-brand brand" href="#inicio">FORNO <span>NOBRE.</span></a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Abrir menu"><span class="navbar-toggler-icon"></span></button>
+  <div class="collapse navbar-collapse" id="navMenu">
+   <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+    <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li><li class="nav-item"><a class="nav-link" href="#cardapio">Cardápio</a></li><li class="nav-item"><a class="nav-link" href="#historia">Nossa história</a></li><li class="nav-item"><a class="nav-link" href="#bibliotecas">Bibliotecas JS</a></li>
+    <li class="nav-item"><button class="btn btn-pizza ms-lg-2" onclick="openCart()">Meu pedido <span class="cart-count" id="cartCount">0</span></button></li>
+   </ul>
+  </div>
+ </div>
+</nav>
+
+<main>
+<section class="hero" id="inicio">
+ <div class="container"><div class="row align-items-center g-5">
+  <div class="col-lg-6" data-aos="fade-up">
+   <div class="hero-kicker mb-3">Feita com tempo. Servida com carinho.</div>
+   <h1>Uma pizza boa muda <em>a noite.</em></h1>
+   <p class="my-4">Massa de fermentação lenta, ingredientes selecionados e aquele sabor que reúne todo mundo à mesa.</p>
+   <div class="d-flex flex-wrap gap-3"><a href="#cardapio" class="btn btn-pizza">Explorar cardápio ↗</a><a href="#historia" class="btn btn-outline-pizza">Conheça a Forno Nobre</a></div>
+   <div class="d-flex gap-4 mt-5"><div><strong>4,9/5</strong><div class="text-secondary small">Avaliação dos clientes</div></div><div><strong>30–45 min</strong><div class="text-secondary small">Tempo estimado</div></div><div><strong>100%</strong><div class="text-secondary small">Feita na hora</div></div></div>
+  </div>
+  <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="150"><div class="hero-image-wrap"><img class="hero-pizza" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1000&q=85" alt="Pizza artesanal recém-saída do forno" width="550" height="550" fetchpriority="high"><div class="round-note">★ A favorita da casa<small>Calabresa Nobre</small></div></div></div>
+ </div></div>
+</section>
+
+<section class="section-pad menu-section" id="cardapio">
+ <div class="container">
+  <div class="text-center mb-5" data-aos="fade-up"><div class="eyebrow mb-2">Direto do nosso forno</div><h2 class="section-title">Escolha sua próxima favorita</h2><p class="section-sub mx-auto">Receitas clássicas e combinações especiais, preparadas com ingredientes de verdade.</p></div>
+  <div class="d-flex flex-wrap justify-content-center gap-2 mb-4" id="filters"><button class="filter-btn active" data-filter="todas">Todas</button><button class="filter-btn" data-filter="classicas">Clássicas</button><button class="filter-btn" data-filter="especiais">Especiais</button><button class="filter-btn" data-filter="doces">Doces</button></div>
+  <div class="row g-4" id="pizzaGrid">
+   <div class="col-md-6 col-lg-4 pizza-item" data-category="classicas" data-aos="fade-up"><article class="pizza-card"><img loading="lazy" width="800" height="220" src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=800&q=85" alt="Pizza de calabresa"><div class="pizza-body"><span class="tag">Mais pedida</span><h3 class="mt-3">Calabresa Nobre</h3><p>Calabresa artesanal, cebola roxa, muçarela e orégano fresco.</p><div class="d-flex align-items-center justify-content-between"><span class="price">R$ 42,90</span><button class="btn btn-pizza" onclick="addPizza('Calabresa Nobre',42.90)">Adicionar +</button></div></div></article></div>
+   <div class="col-md-6 col-lg-4 pizza-item" data-category="classicas" data-aos="fade-up" data-aos-delay="80"><article class="pizza-card"><img loading="lazy" width="800" height="220" src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=85" alt="Pizza marguerita"><div class="pizza-body"><span class="tag">Clássica</span><h3 class="mt-3">Margherita</h3><p>Molho de tomate, muçarela, tomate fresco e manjericão.</p><div class="d-flex align-items-center justify-content-between"><span class="price">R$ 39,90</span><button class="btn btn-pizza" onclick="addPizza('Margherita',39.90)">Adicionar +</button></div></div></article></div>
+   <div class="col-md-6 col-lg-4 pizza-item" data-category="especiais" data-aos="fade-up" data-aos-delay="160"><article class="pizza-card"><img loading="lazy" width="800" height="220" src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=800&q=85" alt="Pizza quatro queijos"><div class="pizza-body"><span class="tag">Especial</span><h3 class="mt-3">Quatro Queijos</h3><p>Muçarela, gorgonzola, parmesão e requeijão cremoso.</p><div class="d-flex align-items-center justify-content-between"><span class="price">R$ 46,90</span><button class="btn btn-pizza" onclick="addPizza('Quatro Queijos',46.90)">Adicionar +</button></div></div></article></div>
+   <div class="col-md-6 col-lg-4 pizza-item" data-category="especiais" data-aos="fade-up"><article class="pizza-card"><img loading="lazy" width="800" height="220" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=85" alt="Pizza pepperoni"><div class="pizza-body"><span class="tag">Sabor intenso</span><h3 class="mt-3">Pepperoni Supreme</h3><p>Pepperoni levemente picante, muçarela e molho da casa.</p><div class="d-flex align-items-center justify-content-between"><span class="price">R$ 48,90</span><button class="btn btn-pizza" onclick="addPizza('Pepperoni Supreme',48.90)">Adicionar +</button></div></div></article></div>
+   <div class="col-md-6 col-lg-4 pizza-item" data-category="classicas" data-aos="fade-up" data-aos-delay="80"><article class="pizza-card"><img loading="lazy" width="800" height="220" src="https://images.unsplash.com/photo-1604382355076-af4b0eb60143?auto=format&fit=crop&w=800&q=85" alt="Pizza portuguesa"><div class="pizza-body"><span class="tag">Da família</span><h3 class="mt-3">Portuguesa</h3><p>Presunto, ovo, cebola, azeitona, ervilha e muçarela.</p><div class="d-flex align-items-center justify-content-between"><span class="price">R$ 43,90</span><button class="btn btn-pizza" onclick="addPizza('Portuguesa',43.90)">Adicionar +</button></div></div></article></div>
+   <div class="col-md-6 col-lg-4 pizza-item" data-category="doces" data-aos="fade-up" data-aos-delay="160"><article class="pizza-card"><img loading="lazy" width="800" height="220" src="img/pizza-doce.jpg" alt="Pizza doce de chocolate"><div class="pizza-body"><span class="tag">Final feliz</span><h3 class="mt-3">Chocolate & Morango</h3><p>Chocolate cremoso, morangos frescos e raspas de chocolate.</p><div class="d-flex align-items-center justify-content-between"><span class="price">R$ 36,90</span><button class="btn btn-pizza" onclick="addPizza('Chocolate & Morango',36.90)">Adicionar +</button></div></div></article></div>
+  </div>
+ </div>
+</section>
+
+<section class="feature-band section-pad">
+ <div class="container"><div class="text-center mb-5" data-aos="fade-up"><div class="eyebrow mb-2" style="color:#e6b866">O segredo está nos detalhes</div><h2 class="section-title">Não é só pizza. É ritual.</h2><p class="section-sub mx-auto">Cada etapa importa para entregar uma experiência que dá vontade de repetir.</p></div>
+  <div class="row g-4"><div class="col-md-4" data-aos="fade-up"><div class="feature-icon">🌾</div><h3>Massa de fermentação lenta</h3><p>Descanso cuidadoso para uma massa leve, saborosa e com bordas douradas.</p></div><div class="col-md-4" data-aos="fade-up" data-aos-delay="100"><div class="feature-icon">🍅</div><h3>Ingredientes selecionados</h3><p>Molho preparado na casa e ingredientes escolhidos para valorizar cada receita.</p></div><div class="col-md-4" data-aos="fade-up" data-aos-delay="200"><div class="feature-icon">🔥</div><h3>Assada na hora</h3><p>Do forno para a caixa, com atenção ao ponto, à textura e ao sabor.</p></div></div>
+ </div>
+</section>
+
+<section class="section-pad" id="historia"><div class="container"><div class="row align-items-center g-5"><div class="col-lg-6" data-aos="fade-right"><img class="story-img" loading="lazy" src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=1000&q=85" alt="Pizza artesanal preparada para servir"></div><div class="col-lg-6" data-aos="fade-left"><div class="eyebrow mb-2">Nossa história</div><h2 class="section-title">Feita com calma. Compartilhada com alegria.</h2><p class="section-sub mt-3">A Forno Nobre nasceu de uma ideia simples: reunir as pessoas em volta de uma pizza feita de verdade. A gente acredita que os melhores momentos não precisam de grandes planos — só de boa companhia e uma mesa cheia.</p><p class="section-sub">Por isso, cuidamos da massa, escolhemos bem os ingredientes e colocamos carinho em cada pedido.</p><a href="#cardapio" class="btn btn-pizza mt-2">Encontrar minha pizza</a></div></div></div></section>
+
+<section class="section-pad pt-0"><div class="container"><div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-4"><div><div class="eyebrow mb-2">Quem já provou</div><h2 class="section-title mb-0">Uma fatia de felicidade.</h2></div><div class="text-secondary">Histórias fictícias para demonstração do layout</div></div>
+<div class="swiper reviewSwiper"><div class="swiper-wrapper">
+ <div class="swiper-slide"><div class="testimonial"><div class="stars">★★★★★</div><p>“A massa é incrível e a pizza chegou quentinha. Já virou a escolha de sexta-feira aqui em casa.”</p><strong>Marina R.</strong><div class="text-secondary small">Cliente ilustrativa</div></div></div>
+ <div class="swiper-slide"><div class="testimonial"><div class="stars">★★★★★</div><p>“A combinação de ingredientes é muito boa. A Quatro Queijos é cremosa na medida certa.”</p><strong>Rafael M.</strong><div class="text-secondary small">Cliente ilustrativo</div></div></div>
+ <div class="swiper-slide"><div class="testimonial"><div class="stars">★★★★★</div><p>“Pedi uma doce para dividir e todo mundo gostou. O cardápio tem opções para todos.”</p><strong>Camila S.</strong><div class="text-secondary small">Cliente ilustrativa</div></div></div>
+</div><div class="swiper-pagination mt-4"></div></div></div></section>
+
+<section class="container mb-5"><div class="cta" data-aos="zoom-in"><div class="position-relative" style="z-index:1"><div class="eyebrow mb-2" style="color:#f0c67f">Sua noite merece</div><h2>Hoje combina com pizza.</h2><p>Escolha seus sabores favoritos e monte seu pedido em poucos cliques.</p><a href="#cardapio" class="btn btn-light rounded-pill px-4 py-3 fw-bold">Montar meu pedido ↗</a></div></div></section>
+
+<section class="library-section section-pad" id="bibliotecas"><div class="container"><div class="text-center mb-5"><div class="eyebrow mb-2">Por trás do site</div><h2 class="section-title">5 bibliotecas JavaScript utilizadas</h2><p class="section-sub mx-auto">Bibliotecas são conjuntos de códigos prontos que ajudam quem programa a criar recursos sem precisar desenvolver tudo do zero.</p></div>
+ <div class="row g-4">
+  <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="library-panel"><div class="library-number">01</div><h3>Bootstrap</h3><p>Facilita a criação de layouts responsivos, menus, botões e componentes que se adaptam ao celular e ao computador.</p><p><strong>Onde aparece:</strong> menu responsivo, grade dos produtos e janela do carrinho.</p><code>bootstrap.min.css</code></div></div>
+  <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="60"><div class="library-panel"><div class="library-number">02</div><h3>AOS</h3><p>Significa <em>Animate On Scroll</em>. Aplica animações quando elementos entram na área visível durante a rolagem.</p><p><strong>Onde aparece:</strong> títulos, cards e blocos que surgem suavemente.</p><code>data-aos="fade-up"</code></div></div>
+  <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="120"><div class="library-panel"><div class="library-number">03</div><h3>Swiper.js</h3><p>Cria carrosséis deslizantes que funcionam com toque no celular e navegação no computador.</p><p><strong>Onde aparece:</strong> depoimentos de clientes na parte inferior.</p><code>new Swiper(...)</code></div></div>
+  <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="library-panel"><div class="library-number">04</div><h3>SweetAlert2</h3><p>Mostra avisos e janelas de confirmação mais bonitas e claras que os alertas tradicionais do navegador.</p><p><strong>Onde aparece:</strong> confirmação ao adicionar pizza e finalizar o pedido.</p><code>Swal.fire(...)</code></div></div>
+  <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="60"><div class="library-panel"><div class="library-number">05</div><h3>GSAP</h3><p>Biblioteca de animações para controlar movimentos e transições de elementos com precisão.</p><p><strong>Onde aparece:</strong> entrada animada do título e do botão principal.</p><code>gsap.from(...)</code></div></div>
+  <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="120"><div class="library-panel"><div class="library-number">+</div><h3>Importante saber</h3><p>JavaScript e Java são linguagens diferentes. Essas são bibliotecas de <strong>JavaScript</strong>, usadas em sites para adicionar interação e efeitos.</p><p>As bibliotecas são carregadas por CDN, então é necessária conexão com a internet para carregá-las.</p></div></div>
+ </div>
+ <div class="alert mt-4 mb-0" style="background:#fff;border:1px solid #eadbca;border-radius:16px"><strong>Para apresentar na escola:</strong> “Uma biblioteca JavaScript é um conjunto de funções e recursos já programados que podemos reutilizar. Neste site, usei cinco bibliotecas para facilitar o layout, criar animações, montar um carrossel e exibir avisos interativos.”</div>
+</div></section>
+</main>
+
+<footer class="footer"><div class="container"><div class="row gy-4"><div class="col-md-6"><a class="brand text-white" href="#inicio">FORNO <span>NOBRE.</span></a><p class="mt-3 mb-0">Pizza artesanal, bons ingredientes e momentos compartilhados.</p></div><div class="col-md-3"><strong>Explore</strong><div class="d-flex flex-column gap-2 mt-3"><a href="#cardapio">Cardápio</a><a href="#historia">Nossa história</a><a href="#bibliotecas">Bibliotecas JS</a></div></div><div class="col-md-3"><strong>Horário ilustrativo</strong><p class="mt-3 mb-0">Ter–Dom: 18h às 23h<br>Segunda: fechado</p></div></div><hr style="border-color:#ffffff20;margin:30px 0 20px"><div class="small text-center" style="color:#a99487">© 2026 Forno Nobre — Projeto demonstrativo para estudo. Preços, avaliações e horários são ilustrativos.</div></div></footer>
+<button class="btn btn-pizza floating-order" onclick="openCart()">🛒 Pedido <span id="floatingCount">0</span></button>
+
+<div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header px-4 py-3"><h2 class="modal-title fs-4">Seu pedido</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div><div class="modal-body p-4"><div id="cartItems"><p class="text-secondary">Seu carrinho ainda está vazio. Escolha uma pizza no cardápio!</p></div><hr><div class="d-flex justify-content-between fs-5"><strong>Total</strong><strong class="text-danger" id="cartTotal">R$ 0,00</strong></div><div class="mt-3"><label class="form-label fw-bold" for="customerName">Seu nome</label><input class="form-control" id="customerName" placeholder="Como podemos te chamar?"></div><div class="mt-3"><label class="form-label fw-bold" for="deliveryAddress">Endereço de entrega</label><input class="form-control" id="deliveryAddress" placeholder="Rua, número e bairro"></div></div><div class="modal-footer p-4 pt-0 border-0"><button class="btn btn-outline-pizza" data-bs-dismiss="modal">Continuar escolhendo</button><button class="btn btn-pizza" onclick="checkout()">Confirmar pedido</button></div></div></div></div>
+
+<!-- Bibliotecas JavaScript: Bootstrap, AOS, Swiper, SweetAlert2 e GSAP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script>
+const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
+const has=n=>typeof window[n]!=='undefined';
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const money=n=>n.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* Bibliotecas: se alguma não carregar (sem internet), o site continua funcionando */
+if(has('AOS')&&!reduce)AOS.init({duration:750,once:true,offset:70});else $$('[data-aos]').forEach(e=>e.removeAttribute('data-aos'));
+if(has('Swiper'))new Swiper('.reviewSwiper',{slidesPerView:1,spaceBetween:18,loop:true,autoplay:reduce?false:{delay:4200,disableOnInteraction:false},pagination:{el:'.swiper-pagination',clickable:true},breakpoints:{768:{slidesPerView:2},992:{slidesPerView:3}}});
+if(has('gsap')&&!reduce){gsap.from('.hero h1',{y:35,opacity:0,duration:1,ease:'power3.out',delay:.15});gsap.from('.hero .btn-pizza',{y:15,opacity:0,duration:.7,delay:.55});}
+
+/* Foto não carregou? Mostra uma pizza ilustrada em vez do ícone quebrado */
+function pizzaSVG(k){
+ const c={calabresa:['#b8362b','#7a1f18'],marguerita:['#d93b2b','#2f7d3a'],queijos:['#fff3c4','#e3b93f'],pepperoni:['#a3231b','#d24a22'],portuguesa:['#f2dcb8','#3d5a2a'],doce:['#4a2518','#d4304c']}[k]||['#a3231b','#d24a22'];
+ let t='';
+ for(let i=0;i<9;i++){const a=i*2*Math.PI/9;t+=`<circle cx="${200+88*Math.cos(a)}" cy="${150+88*Math.sin(a)}" r="15" fill="${c[0]}"/>`}
+ for(let i=0;i<5;i++){const a=i*2*Math.PI/5+.6;t+=`<circle cx="${200+48*Math.cos(a)}" cy="${150+48*Math.sin(a)}" r="12" fill="${c[1]}"/>`}
+ const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect width="400" height="300" fill="#f4e6d4"/><circle cx="200" cy="150" r="124" fill="#d9993f"/><circle cx="200" cy="150" r="108" fill="${k==='doce'?'#7a4630':'#f3cf75'}"/>${t}<circle cx="200" cy="150" r="14" fill="${c[0]}"/></svg>`;
+ return 'data:image/svg+xml,'+encodeURIComponent(svg);
+}
+function fixImg(i){if(i.dataset.fb)return;i.dataset.fb=1;const a=(i.alt||'').toLowerCase();i.src=pizzaSVG(['calabresa','marguerita','queijos','pepperoni','portuguesa','doce'].find(x=>a.includes(x)));}
+document.addEventListener('error',e=>{if(e.target.tagName==='IMG')fixImg(e.target)},true);
+addEventListener('load',()=>$$('img').forEach(i=>{if(i.complete&&!i.naturalWidth)fixImg(i)}));
+
+/* Menu mobile fecha ao clicar num link */
+$$('#navMenu .nav-link').forEach(a=>a.addEventListener('click',()=>{const m=$('#navMenu');if(m.classList.contains('show')&&has('bootstrap'))bootstrap.Collapse.getOrCreateInstance(m).hide();}));
+
+/* Carrinho com quantidade */
+let cart={};
+const items=()=>Object.entries(cart);
+const count=()=>items().reduce((s,[,i])=>s+i.qty,0);
+const total=()=>items().reduce((s,[,i])=>s+i.qty*i.price,0);
+function notify(o){if(has('Swal'))return Swal.fire(o);alert(o.title+(o.text?'\n'+o.text:''));return Promise.resolve();}
+function addPizza(name,price){cart[name]=cart[name]||{price,qty:0};cart[name].qty++;updateCart();if(has('Swal'))Swal.fire({toast:true,position:'top-end',icon:'success',title:name+' adicionada ao pedido!',showConfirmButton:false,timer:1800});}
+function changeQty(name,d){if(!cart[name])return;cart[name].qty+=d;if(cart[name].qty<=0)delete cart[name];updateCart();}
+function updateCart(){
+ $('#cartCount').textContent=$('#floatingCount').textContent=count();
+ $('#cartTotal').textContent=money(total());
+ $('#cartItems').innerHTML=count()?items().map(([n,i])=>`<div class="cart-row"><div><strong>${esc(n)}</strong><div class="text-secondary small">${money(i.price)} cada · ${money(i.price*i.qty)}</div></div><div class="qty"><button class="btn btn-outline-pizza" data-name="${esc(n)}" data-d="-1" aria-label="Diminuir ${esc(n)}">−</button><span>${i.qty}</span><button class="btn btn-outline-pizza" data-name="${esc(n)}" data-d="1" aria-label="Aumentar ${esc(n)}">+</button></div></div>`).join(''):'<p class="text-secondary">Seu carrinho ainda está vazio. Escolha uma pizza no cardápio!</p>';
+}
+$('#cartItems').addEventListener('click',e=>{const b=e.target.closest('button[data-name]');if(b)changeQty(b.dataset.name,+b.dataset.d);});
+function openCart(){bootstrap.Modal.getOrCreateInstance($('#cartModal')).show();}
+function checkout(){
+ if(!count())return notify({icon:'info',title:'Seu carrinho está vazio',text:'Adicione uma pizza antes de confirmar.'});
+ const name=$('#customerName').value.trim(),address=$('#deliveryAddress').value.trim();
+ if(!name||!address)return notify({icon:'warning',title:'Faltam alguns dados',text:'Preencha seu nome e o endereço de entrega.'});
+ const t=money(total());
+ const done=()=>{cart={};updateCart();bootstrap.Modal.getOrCreateInstance($('#cartModal')).hide();};
+ if(has('Swal'))Swal.fire({icon:'success',title:'Pedido demonstrativo confirmado!',html:`Obrigado, <strong>${esc(name)}</strong>!<br>Total: <strong>${t}</strong><br><small>Este site é um projeto de estudo e não envia pedidos reais.</small>`}).then(done);
+ else{alert('Pedido demonstrativo confirmado! Total: '+t);done();}
+}
+
+/* Filtros do cardápio */
+$$('.filter-btn').forEach(btn=>btn.addEventListener('click',()=>{
+ $$('.filter-btn').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-pressed','false')});
+ btn.classList.add('active');btn.setAttribute('aria-pressed','true');
+ const f=btn.dataset.filter;
+ $$('.pizza-item').forEach(c=>c.classList.toggle('d-none',f!=='todas'&&c.dataset.category!==f));
+ if(has('AOS'))AOS.refresh();
+}));
+updateCart();
+</script>
+</body>
+</html>
